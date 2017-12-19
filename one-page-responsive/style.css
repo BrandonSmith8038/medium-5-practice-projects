@@ -28,6 +28,7 @@ body {
 .nav-link.active {
   background: #4a515f;
 }
+
 #hero {
   background: url('/images/juan-davila-153912.jpg');
   background-size: cover;
@@ -38,6 +39,7 @@ body {
   align-items: center;
   height: 600px;
 }
+
 #main-heading {
   font-size: 80px;
   font-weight: 500;
@@ -46,12 +48,14 @@ body {
   text-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
   text-transform: uppercase;
 }
+
 #sub-heading {
   margin: 0;
   padding: 0;
   font-size: 30px;
   font-weight: 500;
 }
+
 #sub-heading span {
   text-decoration: line-through;
 }
@@ -61,6 +65,7 @@ body {
   justify-content: center;
   margin: 70px 0 70px 0;
 }
+
 .card {
   background: #f2f2f2;
   font-size: 16px;
@@ -69,7 +74,13 @@ body {
   width: 300px;
 }
 
+.card.card-big {
+  width: 500px;
+}
+
 .card-body {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
 }
 
@@ -79,37 +90,60 @@ body {
 }
 
 .button {
+  align-self: flex-end;
   color: white;
+  cursor: pointer;
   border-radius: 8px;
+  margin-top: 20px;
   padding: 15px 30px 15px 30px;
   outline: none;
   font-size: 18px;
   font-weight: 400;
+  transition: 0.5s;
 }
 
 .button.button-green {
   background-color: #43a047;
 }
+
+.button.button-green:hover {
+  background-color: #2e7d32;
+}
+
 .button.button-blue {
   background: #1976d2;
 }
+
+.button.button-blue:hover {
+  background: #0d47a1;
+}
+
 .button.button-red {
   background: #e53935;
 }
+
+.button.button-red:hover {
+  background: #c62828;
+}
+
 .card-title {
   font-size: 20px;
   font-weight: bold;
-  margin: 20px 0 20px 0;
+  margin: 10px 0 10px 0;
 }
+
 #bootstrap .card-title {
   color: #43a047;
 }
+
 #responsive .card-title {
   color: #1976d2;
 }
+
 #parallax .card-title {
   color: #e53935;
 }
+
 .card-info {
   color: #333;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
@@ -125,11 +159,33 @@ body {
   width: 100%;
 }
 
+.card-image.card-image-big {
+  height: 250px;
+}
+
 #bootstrap .card-image {
   background: url('images/anton-darius-sollers-306223.jpg');
   background-size: cover;
 }
+
 #responsive .card-image {
   background: url('images/dairui-chen-257848.jpg');
   background-size: cover;
+}
+
+#parallax .card-image {
+  background: url('images/tiago-gerken-205.jpg');
+  background-size: cover;
+}
+
+#left-side .card-image {
+  background: url('images/kitchen-apartment-home-room-1920x860.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#right-side .card-image {
+  background: url('images/download.jpg');
+  background-size: cover;
+  background-position: center;
 }
