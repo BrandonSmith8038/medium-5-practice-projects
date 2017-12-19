@@ -224,6 +224,7 @@ body {
 p.services {
   font-weight: 100px;
   margin: 0 auto;
+  width: 60%;
 }
 
 section#four-cards {
@@ -401,5 +402,27 @@ p.form-description {
 
 section#footer {
   text-align: center;
-  color: rgb(29, 29, 29);
+}
+
+#footer h3 {
+  color: #666;
+  font-size: 28px;
+}
+
+#footer p {
+  color: #999;
+  font-size: 12px;
+}
+
+#footer p span {
+  text-decoration: line-through;
+}
+
+.copy {
+  margin-top: 50px;
+}
+
+hr {
+  color: #999;
+  width: 50%;
 }
