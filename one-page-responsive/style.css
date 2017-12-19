@@ -1,0 +1,135 @@
+body {
+  box-sizing: border-box;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation {
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.nav {
+  background: #3b404d;
+}
+
+.nav-link {
+  outline: 1px solid rgb(194, 194, 194);
+  padding: 10px;
+}
+
+.nav-link.active {
+  background: #4a515f;
+}
+#hero {
+  background: url('/images/juan-davila-153912.jpg');
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+#main-heading {
+  font-size: 80px;
+  font-weight: 500;
+  margin: 0 20px 0 20px;
+  padding: 0;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+}
+#sub-heading {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-weight: 500;
+}
+#sub-heading span {
+  text-decoration: line-through;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  margin: 70px 0 70px 0;
+}
+.card {
+  background: #f2f2f2;
+  font-size: 16px;
+  font-weight: 100;
+  margin-right: 30px;
+  width: 300px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  color: white;
+  border-radius: 8px;
+  padding: 15px 30px 15px 30px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.button.button-green {
+  background-color: #43a047;
+}
+.button.button-blue {
+  background: #1976d2;
+}
+.button.button-red {
+  background: #e53935;
+}
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0 20px 0;
+}
+#bootstrap .card-title {
+  color: #43a047;
+}
+#responsive .card-title {
+  color: #1976d2;
+}
+#parallax .card-title {
+  color: #e53935;
+}
+.card-info {
+  color: #333;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+.card-image {
+  height: 150px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#bootstrap .card-image {
+  background: url('images/anton-darius-sollers-306223.jpg');
+  background-size: cover;
+}
+#responsive .card-image {
+  background: url('images/dairui-chen-257848.jpg');
+  background-size: cover;
+}
