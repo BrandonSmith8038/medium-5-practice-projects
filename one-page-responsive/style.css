@@ -5,6 +5,10 @@ body {
   padding: 0;
 }
 
+.container {
+  max-width: 60%;
+}
+
 #navigation {
   align-items: center;
   color: white;
@@ -91,11 +95,13 @@ body {
 
 .button {
   align-self: flex-end;
+  box-shadow: none;
+  border: none;
   color: white;
   cursor: pointer;
   border-radius: 8px;
   margin-top: 20px;
-  padding: 15px 30px 15px 30px;
+  padding: 12px 30px 12px 30px;
   outline: none;
   font-size: 18px;
   font-weight: 400;
@@ -188,4 +194,212 @@ body {
   background: url('images/download.jpg');
   background-size: cover;
   background-position: center;
+}
+
+#services {
+  background: url('images/oleg-chursin-216430.jpg');
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin: 10px 0 40px 0;
+  text-align: center;
+}
+
+#services h2 {
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+}
+
+.service-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  align-content: center;
+  flex-basis: auto;
+  /* default value */
+  flex-grow: 1;
+}
+
+p.services {
+  font-weight: 100px;
+  margin: 0 auto;
+}
+
+section#four-cards {
+  padding: 0 30px 0 30px;
+}
+
+.card-image.card-image-square {
+  height: 270px;
+}
+
+#column-1 .card-image {
+  background: url('images/card-image-1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#column-2 .card-image {
+  background: url('images/card-image-2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#column-3 .card-image {
+  background: url('images/card-image-3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#column-4 .card-image {
+  background: url('images/card-image-4.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#big-single-card {
+  margin-bottom: 40px;
+}
+
+.single-card-wrapper {
+  margin: 0 auto;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.card.card-giant {
+  color: rgb(117, 114, 114);
+  width: 100%;
+}
+
+#single-card-giant .card-image {
+  background: url('images/card-image-giant.jpg');
+  background-size: cover;
+}
+
+.card-image-giant {
+  height: 450px;
+}
+
+.button-more {
+  background: rgb(255, 252, 252);
+  color: rgb(117, 114, 114);
+  margin-right: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+section#contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  background: url('images/francois-olwage-206073.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+#contact h2 {
+  color: white;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+  font-weight: 100;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+.form-description {
+  background-color: rgba(242, 242, 242, 0.4);
+  border-radius: 8px;
+}
+
+p.form-description {
+  font-size: 18px;
+  padding: 30px;
+  text-align: center;
+}
+
+.contact-wrapper {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.form-wrapper {
+  display: flex;
+}
+
+.form-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 20px;
+  width: 100%;
+}
+
+.form-input-wrapper input {
+  color: black;
+  border-radius: 2px;
+  padding: 5px;
+  background-color: rgba(242, 242, 242, 0.4);
+  outline: none;
+  border: none;
+  height: 30px;
+}
+
+.form-submit-wrapper {
+  margin-left: auto;
+}
+
+.button.button-submit {
+  margin-right: auto;
+}
+
+.form-submit-wrapper textarea {
+  background-color: rgba(242, 242, 242, 0.4);
+  border-radius: 2px;
+  border: none;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome */
+  color: #000;
+}
+
+::-webkit-textarea-placeholder {
+  /* Chrome */
+  color: #000;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #000;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #000;
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  /* Firefox 4 - 18 */
+  color: #000;
+  opacity: 1;
+}
+
+.button.button-submit {
+  background-color: rgb(29, 29, 29);
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: .5s;
+}
+
+.button.button-submit:hover {
+  color: rgb(29, 29, 29);
+  background-color: white;
+}
+
+section#footer {
+  text-align: center;
+  color: rgb(29, 29, 29);
 }
