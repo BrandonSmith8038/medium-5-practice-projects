@@ -1,0 +1,45 @@
+//====================
+// BASE
+//===================
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+//====================
+// Hero
+//===================
+#hero {
+  background: url('../img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+//====================
+// NAV
+//===================
+.nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  color: white;
+  justify-content: flex-end;
+  padding: 10px 20px;
+
+  li.nav-link {
+    font-size: 13px;
+    margin-right: 20px;
+    text-transform: uppercase;
+  }
+
+  li#nav-brand {
+    font-size: 25px;
+    margin-right: auto;
+    letter-spacing: 5px;
+  }
+}
