@@ -43,3 +43,70 @@ ul {
     letter-spacing: 5px;
   }
 }
+//====================
+// Hero Section
+//===================
+.hero-content {
+  align-items: flex-start;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  margin-left: 150px;
+
+  .small-heading {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+  .main-heading {
+    img {
+      max-width: 550px;
+    }
+  }
+
+  .video-subheading {
+    display: flex;
+
+    .play-icon {
+      border: 3px solid #fff;
+      border-radius: 50%;
+      font-size: 20px;
+      height: 75px;
+      line-height: 68px;
+      text-align: center;
+      width: 75px;
+    }
+    .sub-heading {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      line-height: 30px;
+      margin-left: 40px;
+      width: 50%;
+    }
+  }
+}
+//====================
+// Section2
+//===================
+#section2 {
+  .section-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    padding: 40px 0;
+    text-align: center;
+  }
+  p {
+    width: 60%;
+  }
+  img {
+    max-width: 300px;
+  }
+}
