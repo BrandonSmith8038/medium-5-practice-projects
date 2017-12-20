@@ -4,6 +4,19 @@ body {
   margin: 0;
   padding: 0;
 }
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+
+.sticky + .content {
+  padding-top: 60px;
+}
 
 .container {
   max-width: 60%;
@@ -29,13 +42,20 @@ body {
   padding: 10px;
 }
 
-.nav-link.active {
+.nav-link.is-active {
   background: #4a515f;
+}
+
+.toggle-nav {
+  color: white;
+  display: none;
+  text-decoration: none;
 }
 
 #hero {
   background: url('/images/juan-davila-153912.jpg');
   background-size: cover;
+  background-attachment: fixed;
   color: white;
   display: flex;
   flex-direction: column;
@@ -79,7 +99,7 @@ body {
 }
 
 .card.card-big {
-  width: 500px;
+  width: auto;
 }
 
 .card-body {
@@ -198,6 +218,7 @@ body {
 
 #services {
   background: url('images/oleg-chursin-216430.jpg');
+  background-attachment: fixed;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
   background-size: cover;
   background-position: center;
@@ -214,7 +235,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 400px;
+  height: auto;
   align-content: center;
   flex-basis: auto;
   /* default value */
@@ -295,9 +316,11 @@ section#contact {
   align-items: center;
   margin-bottom: 50px;
   background: url('images/francois-olwage-206073.jpg');
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: auto;
+  max-width: 100%;
 }
 
 #contact h2 {
@@ -392,7 +415,7 @@ p.form-description {
   background-color: rgb(29, 29, 29);
   border: 1px solid white;
   border-radius: 10px;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .button.button-submit:hover {
@@ -425,4 +448,51 @@ section#footer {
 hr {
   color: #999;
   width: 50%;
+}
+
+/* Mobile Nav */
+
+@media screen and (max-width: 480px) {
+  .toggle-nav {
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+  }
+
+  #navigation {
+    flex-direction: column;
+    padding: 0;
+  }
+  .nav ul {
+    overflow: hidden;
+    padding-top: 50px;
+    height: 0;
+    transition: height 0.3s;
+  }
+
+  .nav-link {
+    outline: none;
+    padding: 20px 0;
+  }
+
+  .nav ul.open {
+    height: 400px;
+  }
+
+  .cards {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  section#contact {
+    flex-direction: column;
+  }
+
+  .contact-wrapper {
+    width: 90%;
+  }
+
+  .form-wrapper {
+    flex-direction: column;
+  }
 }
