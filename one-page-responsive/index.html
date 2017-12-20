@@ -14,9 +14,15 @@
 		<a href="#" class="toggle-nav">&#9776;</a>
 		<ul class='' id="navigation">
 			<li class="nav-link is-active">Homepage</li>
-			<li class="nav-link">About Us</li>
-			<li class="nav-link">Services</li>
-			<li class="nav-link">Contact</li>
+			<li class="nav-link">
+				<a href="#about">About Us</a>
+			</li>
+			<li class="nav-link">
+				<a href="#services">Services</a>
+			</li>
+			<li class="nav-link">
+				<a href="#contact">Contact</a>
+			</li>
 			<li class="nav-link">External</li>
 		</ul>
 	</nav>
@@ -25,7 +31,7 @@
 		<h2 id='sub-heading'>Simple
 			<span>Bootstrap</span> Theme</h2>
 	</section>
-	<section id="section1">
+	<section id="about">
 		<div class="cards">
 			<div class="card" id='bootstrap'>
 				<div class="card-image">
@@ -80,7 +86,7 @@
 			</div>
 		</div>
 	</section>
-	<section id="section2">
+	<section id="services">
 		<div class="cards">
 			<div class="card card-big" id='left-side'>
 				<div class="card-image card-image-big">
@@ -264,7 +270,9 @@
 			<p class="copy">Copyright &copy; 2084 Your Company Name | Design: Brandon Smith</p>
 		</div>
 	</section>
-
+	<script>
+		var scroll = new SmoothScroll('a[href*="#"]');
+	</script>
 	<script src='main.js'></script>
 </body>
 

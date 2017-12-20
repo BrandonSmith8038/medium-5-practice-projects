@@ -4,6 +4,10 @@ body {
   margin: 0;
   padding: 0;
 }
+body,
+.smooth-container {
+  scroll-behavior: smooth;
+}
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 
 .sticky {
@@ -26,9 +30,9 @@ body {
   align-items: center;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   list-style: none;
-  max-width: 60%;
+  max-width: auto;
   margin: 0 auto;
   padding: 20px;
 }
@@ -40,10 +44,16 @@ body {
 .nav-link {
   outline: 1px solid rgb(194, 194, 194);
   padding: 10px;
+  margin-right: 10px;
 }
 
 .nav-link.is-active {
   background: #4a515f;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
 }
 
 .toggle-nav {
@@ -87,7 +97,7 @@ body {
 .cards {
   display: flex;
   justify-content: center;
-  margin: 70px 0 70px 0;
+  margin: 70px auto 70px auto;
 }
 
 .card {
@@ -245,6 +255,7 @@ body {
 p.services {
   font-weight: 100px;
   margin: 0 auto;
+  padding-bottom: 40px;
   width: 60%;
 }
 
@@ -354,7 +365,7 @@ p.form-description {
 .form-input-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-right: 20px;
   width: 100%;
 }
@@ -371,6 +382,10 @@ p.form-description {
 
 .form-submit-wrapper {
   margin-left: auto;
+}
+
+input[type='text'] {
+  margin-bottom: 16px;
 }
 
 .button.button-submit {
@@ -450,7 +465,26 @@ hr {
   width: 50%;
 }
 
-/* Mobile Nav */
+@media screen and (max-width: 700px) {
+  .nav-link {
+    font-size: 14px;
+  }
+
+  #four-cards .cards {
+    flex-wrap: wrap;
+  }
+
+  #four-cards .card {
+    width: 40%;
+  }
+  .form-wrapper {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  input {
+    margin-bottom: 20px;
+  }
+}
 
 @media screen and (max-width: 480px) {
   .toggle-nav {
@@ -494,5 +528,22 @@ hr {
 
   .form-wrapper {
     flex-direction: column;
+    padding-bottom: 20px;
+  }
+  .card {
+    margin: 30px auto;
+  }
+  section#services {
+    padding: 0 20px;
+  }
+
+  p.services {
+    margin-bottom: 40px;
+  }
+  textarea {
+    width: 99%;
+  }
+  input {
+    margin-bottom: 20px;
   }
 }
