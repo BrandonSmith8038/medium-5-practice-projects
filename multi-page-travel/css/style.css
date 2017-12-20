@@ -188,8 +188,7 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: white;
-  margin-bottom: 50px; }
+  color: white; }
   #section4 .section-wrapper {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -221,6 +220,100 @@ ul {
     line-height: 30px;
     margin-bottom: 50px; }
   #section4 button {
+    background: none;
+    border: 2px solid #fff;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    outline: none;
+    padding: 15px 35px; }
+
+#section5 {
+  background: url("../img/section5-bg.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white; }
+  #section5 .section-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 150px 0; }
+  #section5 h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    margin-bottom: 5px;
+    text-transform: uppercase; }
+  #section5 p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin-bottom: 50px; }
+  #section5 button {
+    background: none;
+    border: 2px solid #fff;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    outline: none;
+    padding: 15px 35px; }
+
+#section6 {
+  background: url("../img/section6-bg.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white; }
+  #section6 .section-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 150px 0; }
+  #section6 h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    margin-bottom: 5px;
+    text-transform: uppercase; }
+  #section6 p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin-bottom: 50px; }
+  #section6 button {
     background: none;
     border: 2px solid #fff;
     color: white;

@@ -1,4 +1,56 @@
 //====================
+// Mixins
+//===================
+@mixin parallax_button {
+  background: none;
+  border: 2px solid #fff;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  outline: none;
+  padding: 15px 35px;
+}
+
+@mixin parallax_p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+
+@mixin parallax_h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+@mixin parallax_section ($bg) {
+  background: url($bg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+@mixin parallax_wrapper {
+  @include flex_centered_columns();
+  padding: 150px 0;
+}
+@mixin flex_centered_columns {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+}
+//====================
 // BASE
 //===================
 * {
@@ -95,11 +147,7 @@ ul {
 //===================
 #section2 {
   .section-wrapper {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    justify-content: center;
+    @include flex_centered_columns();
     padding: 40px 0;
     text-align: center;
   }
@@ -192,45 +240,47 @@ ul {
   }
 }
 #section4 {
-  background: url('../img/section4-bg.jpg');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  color: white;
-  margin-bottom: 50px;
+  @include parallax_section('../img/section4-bg.jpg');
   .section-wrapper {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    justify-content: center;
-    padding: 150px 0;
+    @include parallax_wrapper();
   }
   h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 45px;
-    font-weight: 400;
-    letter-spacing: 10px;
-    margin-bottom: 5px;
-    text-transform: uppercase;
+    @include parallax_h2();
   }
   p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    line-height: 30px;
-    margin-bottom: 50px;
+    @include parallax_p();
   }
   button {
-    background: none;
-    border: 2px solid #fff;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    outline: none;
-    padding: 15px 35px;
+    @include parallax_button();
+  }
+}
+#section5 {
+  @include parallax_section('../img/section5-bg.jpg');
+  .section-wrapper {
+    @include parallax_wrapper();
+  }
+  h2 {
+    @include parallax_h2();
+  }
+  p {
+    @include parallax_p();
+  }
+  button {
+    @include parallax_button();
+  }
+}
+#section6 {
+  @include parallax_section('../img/section6-bg.jpg');
+  .section-wrapper {
+    @include parallax_wrapper();
+  }
+  h2 {
+    @include parallax_h2();
+  }
+  p {
+    @include parallax_p();
+  }
+  button {
+    @include parallax_button();
   }
 }
