@@ -116,3 +116,57 @@ ul {
 
 #section2 img {
   max-width: 250px; }
+
+#section3 .section-wrapper {
+  background-color: #f8f8f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 100px 0; }
+
+#section3 .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding-right: 40px;
+  width: 50%; }
+  #section3 .text h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    margin-bottom: 15px;
+    text-transform: uppercase; }
+  #section3 .text h6 {
+    color: #292929;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase; }
+  #section3 .text p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 30px;
+    padding: 0 70px; }
+
+#section3 .pictures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+#section3 img {
+  max-height: 150px;
+  margin-right: 15px; }
