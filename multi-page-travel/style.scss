@@ -10,6 +10,12 @@
   font-size: 15px;
   outline: none;
   padding: 15px 35px;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    color: lighten(#000, 50%);
+    background: #fff;
+  }
 }
 
 @mixin parallax_p {
@@ -401,6 +407,11 @@ a {
       color: #fff;
       margin-right: 290px;
       margin-top: 80px;
+
+      &:hover {
+        color: white;
+        background: lighten(#000, 40%);
+      }
     }
   }
 }
@@ -433,11 +444,16 @@ a {
     border: 1px solid #fefefe;
     color: white;
     font-family: 'Oswald', sans-serif;
+    height: 40px;
     letter-spacing: 2px;
     outline: none;
-    height: 40px;
     padding-left: 20px;
+    transition: outline 0.2s;
     width: 46%;
+
+    &:focus {
+      outline: 1px solid #ccc;
+    }
   }
   button {
     background: white;
@@ -530,6 +546,11 @@ footer {
     i {
       font-size: 16px;
       margin-right: 10px;
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+      }
     }
   }
   .footer-button {
@@ -540,6 +561,11 @@ footer {
       background: none;
       border: 2px solid rgb(170, 170, 170);
       padding: 5px 30px;
+      transition: 0.3s;
+
+      &:hover {
+        border: 2px solid #fff;
+      }
     }
     padding: 40px 0 40px 0;
   }
