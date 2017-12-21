@@ -4,13 +4,16 @@
 
 const videoButton = document.querySelector('.play-icon');
 const videoModal = document.querySelector('.video-modal');
+const videoWrapper = document.querySelector('.video-wrapper');
+const modal = document.querySelector('iframe');
 
 videoButton.addEventListener('click', () => {
   videoModal.style.display = 'block';
 });
 
 function clickOutside(e) {
-  if (e.target == videoModal) {
+  console.log(e.target);
+  if (e.target == videoWrapper) {
     videoModal.style.display = 'none';
   }
 }
