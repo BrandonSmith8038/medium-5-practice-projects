@@ -104,6 +104,10 @@ button {
   cursor: pointer;
   outline: none;
 }
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
 //====================
 // Hero
 //===================
@@ -131,9 +135,12 @@ button {
   }
 
   li#nav-brand {
-    font-size: 25px;
     margin-right: auto;
-    letter-spacing: 5px;
+    a {
+      color: white;
+      font-size: 25px;
+      letter-spacing: 5px;
+    }
   }
 }
 //====================
@@ -168,6 +175,7 @@ button {
     .play-icon {
       border: 3px solid #fff;
       border-radius: 50%;
+      cursor: pointer;
       font-size: 20px;
       height: 75px;
       line-height: 68px;
@@ -180,6 +188,30 @@ button {
       line-height: 30px;
       margin-left: 40px;
       width: 50%;
+    }
+  }
+}
+.video-modal {
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  height: 100vh;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+  animation-name: modalOpen;
+  animation-duration: 1s;
+  .video-wrapper {
+    margin: 20% 30%;
+  }
+  @keyframes modalOpen {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 }
@@ -254,6 +286,9 @@ button {
     margin-right: 15px;
   }
 }
+//====================
+// Subsection1
+//===================
 #subsection1 {
   .section-wrapper {
     color: #292929;
@@ -267,6 +302,9 @@ button {
     text-transform: uppercase;
   }
 }
+//====================
+// Section4
+//===================
 #section4 {
   @include parallax_section('../img/section4-bg.jpg');
   .section-wrapper {
@@ -282,6 +320,9 @@ button {
     @include parallax_button();
   }
 }
+//====================
+// Section5
+//===================
 #section5 {
   @include parallax_section('../img/section5-bg.jpg');
   .section-wrapper {
@@ -297,6 +338,9 @@ button {
     @include parallax_button();
   }
 }
+//====================
+// Section6
+//===================
 #section6 {
   @include parallax_section('../img/section6-bg.jpg');
   .section-wrapper {
@@ -312,6 +356,9 @@ button {
     @include parallax_button();
   }
 }
+//====================
+// Section7
+//===================
 #section7 {
   .section-wrapper {
     display: flex;
@@ -357,6 +404,9 @@ button {
     }
   }
 }
+//====================
+// Section8
+//===================
 #section8 {
   background: #909f5c;
   .section-wrapper {
@@ -405,6 +455,9 @@ button {
     opacity: 0.5;
   }
 }
+//====================
+// Footer
+//===================
 footer {
   background: #2d2d2d;
   color: white;
