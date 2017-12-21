@@ -42,3 +42,25 @@
     }
   }
 }
+#about-section1 {
+  .section-wrapper {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding: 100px 75px;
+  }
+  h6 {
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-bottom: 30px;
+  }
+  p {
+    color: #666;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
