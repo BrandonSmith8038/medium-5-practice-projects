@@ -1,25 +1,44 @@
-//====================
-// NAV
-//===================
 .nav {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  display: flex;
-  color: white;
-  justify-content: flex-end;
-  padding: 10px 20px;
-
   li.nav-link {
-    font-size: 13px;
-    margin-right: 20px;
+    color: #222;
+  }
+  li#nav-brand {
+    a {
+      color: #222;
+    }
+  }
+}
+
+#about-hero {
+  .section-wrapper {
+    @include flex_centered_columns();
+    background: url('../img/cover11.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    height: 400px;
+    position: relative;
+  }
+  h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    line-height: 48px;
     text-transform: uppercase;
   }
+  .links {
+    bottom: 0;
+    color: rbg(102, 102, 102);
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    padding-bottom: 30px;
+    position: absolute;
+    text-transform: uppercase;
 
-  li#nav-brand {
-    margin-right: auto;
-    a {
-      color: white;
-      font-size: 25px;
-      letter-spacing: 5px;
+    p {
+      word-spacing: 15px;
     }
   }
 }

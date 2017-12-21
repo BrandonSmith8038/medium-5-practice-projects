@@ -790,3 +790,51 @@ footer {
           padding: 10px 100px; } }
       footer .footer-button button:hover {
         border: 2px solid #fff; }
+
+.nav li.nav-link {
+  color: #222; }
+
+.nav li#nav-brand a {
+  color: #222; }
+
+#about-hero .section-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url("../img/cover11.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  height: 400px;
+  position: relative; }
+
+#about-hero h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  line-height: 48px;
+  text-transform: uppercase; }
+
+#about-hero .links {
+  bottom: 0;
+  color: rbg(102, 102, 102);
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  padding-bottom: 30px;
+  position: absolute;
+  text-transform: uppercase; }
+  #about-hero .links p {
+    word-spacing: 15px; }
