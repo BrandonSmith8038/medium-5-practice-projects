@@ -4,12 +4,12 @@ var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
   return gulp
-    .src('*.scss')
+    .src('./scss/**/style.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest('./css'));
 });
 
-gulp.task('sass:watch', function() {
-  gulp.watch('*.scss', ['sass']);
+gulp.task('watch', function() {
+  gulp.watch('./scss/**/*.scss', ['sass']);
 });

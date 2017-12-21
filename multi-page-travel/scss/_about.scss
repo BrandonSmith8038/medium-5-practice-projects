@@ -1,0 +1,25 @@
+//====================
+// NAV
+//===================
+.nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  color: white;
+  justify-content: flex-end;
+  padding: 10px 20px;
+
+  li.nav-link {
+    font-size: 13px;
+    margin-right: 20px;
+    text-transform: uppercase;
+  }
+
+  li#nav-brand {
+    margin-right: auto;
+    a {
+      color: white;
+      font-size: 25px;
+      letter-spacing: 5px;
+    }
+  }
+}

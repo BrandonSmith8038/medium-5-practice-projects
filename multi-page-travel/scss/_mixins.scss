@@ -1,0 +1,98 @@
+@mixin parallax_button {
+  background: none;
+  border: 2px solid #fff;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  outline: none;
+  padding: 15px 35px;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    color: lighten(#000, 50%);
+    background: #fff;
+  }
+}
+
+@mixin parallax_p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+
+@mixin parallax_h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin parallax_section ($bg) {
+  background: url($bg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+@mixin parallax_wrapper {
+  @include flex_centered_columns();
+  padding: 150px 0;
+}
+@mixin flex_centered_columns {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+}
+@mixin main_heading {
+  font-family: 'Oswald', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+@mixin sub_heading {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: $color;
+  }
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: $color;
+  }
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: $color;
+  }
+}
+@mixin footer_muted {
+  color: #fefefe;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+@mixin media_phone {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
