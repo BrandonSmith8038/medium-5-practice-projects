@@ -862,3 +862,33 @@ footer {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 25px; }
+
+#about-section2 .section-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px; }
+  #about-section2 .section-wrapper .left-side {
+    color: #292929;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding-right: 200px;
+    padding-left: 100px;
+    text-align: center;
+    text-transform: uppercase; }
+  #about-section2 .section-wrapper .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #666;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 64px;
+    padding-right: 50px; }
+    #about-section2 .section-wrapper .row .section {
+      width: 25%; }
