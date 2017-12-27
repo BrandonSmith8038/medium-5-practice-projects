@@ -19,7 +19,7 @@ a {
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
-  background: #666;
+  background: rgba(102, 102, 102, 0.4);
   position: fixed;
   top: 0;
   width: 100%; }
@@ -937,3 +937,31 @@ footer {
   font-weight: 400;
   line-height: 24px;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+#about-section4 .section-wrapper .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 100px 50px; }
+
+#about-section4 .column1 {
+  color: rbg(102, 102, 102);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  #about-section4 .column1 h6 {
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center; }
+
+#about-section4 .column2 {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2; }
+  #about-section4 .column2 img {
+    max-width: 200px; }

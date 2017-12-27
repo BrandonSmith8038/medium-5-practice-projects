@@ -143,3 +143,32 @@
     }
   }
 }
+#about-section4 {
+  .section-wrapper {
+    .row {
+      display: flex;
+      justify-content: space-around;
+      padding: 100px 50px;
+    }
+  }
+  .column1 {
+    color: rbg(102, 102, 102);
+    flex-grow: 1;
+
+    h6 {
+      font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+  .column2 {
+    flex-grow: 2;
+
+    img {
+      max-width: 200px;
+    }
+  }
+}
