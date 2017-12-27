@@ -7,9 +7,11 @@ const videoModal = document.querySelector('.video-modal');
 const videoWrapper = document.querySelector('.video-wrapper');
 const modal = document.querySelector('iframe');
 
-videoButton.addEventListener('click', () => {
-  videoModal.style.display = 'block';
-});
+if (videoButton) {
+  videoButton.addEventListener('click', () => {
+    videoModal.style.display = 'block';
+  });
+}
 
 function clickOutside(e) {
   console.log(e.target);
