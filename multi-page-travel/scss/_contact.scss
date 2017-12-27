@@ -37,3 +37,127 @@
     }
   }
 }
+#contact-main {
+  .section-wrapper {
+    .row {
+      display: flex;
+      height: auto;
+      max-height: 640px;
+    }
+    #row1 {
+      .left-side {
+        background: url('../img/small2.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+        flex: 0 0 50%;
+      }
+      .right-side {
+        align-self: center;
+        color: #666;
+        flex: 0 0 50%;
+        font-family: $openSans;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 24px;
+        padding: 50px 10%;
+        width: 50%;
+        .address {
+          padding-top: 24px;
+        }
+        .email-phone {
+          margin-top: 24px;
+
+          span {
+            font-weight: bold;
+          }
+        }
+        hr {
+          margin-top: 25px;
+        }
+        h2 {
+          color: #292929;
+          font-family: $raleway;
+          font-size: 24px;
+          font-weight: 400;
+          letter-spacing: 3px;
+          line-height: 32px;
+          margin-bottom: 24px;
+          text-transform: uppercase;
+        }
+      }
+    }
+    #row2 {
+      .left-side {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 50%;
+        h6 {
+          color: #292929;
+          font-family: $raleway;
+          font-size: 12px;
+          font-weight: bold;
+          letter-spacing: 3px;
+          margin-top: 24px;
+          text-transform: uppercase;
+          text-align: center;
+        }
+        form {
+          font-family: $raleway;
+          font-weight: 500;
+          margin: 20px auto;
+          width: 50%;
+
+          input[type='text'] {
+            border: none;
+            background: #f5f5f5;
+            color: rgb(102, 102, 102);
+            font-weight: 500;
+            height: 50px;
+            margin-bottom: 20px;
+            outline: none;
+            padding-left: 20px;
+            text-transform: uppercase;
+            width: 100%;
+
+            &:focus {
+              outline: 1px solid #ccc;
+            }
+          }
+          textarea {
+            border: none;
+            background: #f5f5f5;
+            color: rgb(102, 102, 102);
+            font-weight: 500;
+            outline: none;
+            padding: 16px 20px;
+            text-transform: uppercase;
+            width: 100%;
+
+            &:focus {
+              outline: 1px solid #ccc;
+            }
+          }
+          button {
+            background: #47b475;
+            border: 2px solid #47b475;
+            color: white;
+            font-weight: bold;
+            line-height: 48px;
+            margin-top: 20px;
+            text-transform: uppercase;
+            transition: background 0.3s ease-in;
+            width: 100%;
+
+            &:hover {
+              background: darken(#47b475, 5%);
+            }
+          }
+        }
+      }
+      .right-side {
+        flex: 0 0 50%;
+      }
+    }
+  }
+}

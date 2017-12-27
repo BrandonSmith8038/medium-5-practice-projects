@@ -910,7 +910,7 @@ footer {
 
 #about-section3 .section-wrapper .team-left h6 {
   color: #292929;
-  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
   text-align: center;
@@ -921,7 +921,7 @@ footer {
 
 #about-section3 .section-wrapper .team-right .team-name {
   color: #292929;
-  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 2px;
@@ -952,7 +952,7 @@ footer {
       -ms-flex-positive: 1;
           flex-grow: 1; }
   #about-section4 .column1 h6 {
-    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -1004,3 +1004,118 @@ footer {
         color: #777;
         content: '/';
         padding-left: 15px; }
+
+#contact-main .section-wrapper .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  max-height: 640px; }
+
+#contact-main .section-wrapper #row1 .left-side {
+  background: url("../img/small2.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%; }
+
+#contact-main .section-wrapper #row1 .right-side {
+  -ms-flex-item-align: center;
+      align-self: center;
+  color: #666;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 24px;
+  padding: 50px 10%;
+  width: 50%; }
+  #contact-main .section-wrapper #row1 .right-side .address {
+    padding-top: 24px; }
+  #contact-main .section-wrapper #row1 .right-side .email-phone {
+    margin-top: 24px; }
+    #contact-main .section-wrapper #row1 .right-side .email-phone span {
+      font-weight: bold; }
+  #contact-main .section-wrapper #row1 .right-side hr {
+    margin-top: 25px; }
+  #contact-main .section-wrapper #row1 .right-side h2 {
+    color: #292929;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 32px;
+    margin-bottom: 24px;
+    text-transform: uppercase; }
+
+#contact-main .section-wrapper #row2 .left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%; }
+  #contact-main .section-wrapper #row2 .left-side h6 {
+    color: #292929;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 24px;
+    text-transform: uppercase;
+    text-align: center; }
+  #contact-main .section-wrapper #row2 .left-side form {
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    margin: 20px auto;
+    width: 50%; }
+    #contact-main .section-wrapper #row2 .left-side form input[type='text'] {
+      border: none;
+      background: #f5f5f5;
+      color: #666666;
+      font-weight: 500;
+      height: 50px;
+      margin-bottom: 20px;
+      outline: none;
+      padding-left: 20px;
+      text-transform: uppercase;
+      width: 100%; }
+      #contact-main .section-wrapper #row2 .left-side form input[type='text']:focus {
+        outline: 1px solid #ccc; }
+    #contact-main .section-wrapper #row2 .left-side form textarea {
+      border: none;
+      background: #f5f5f5;
+      color: #666666;
+      font-weight: 500;
+      outline: none;
+      padding: 16px 20px;
+      text-transform: uppercase;
+      width: 100%; }
+      #contact-main .section-wrapper #row2 .left-side form textarea:focus {
+        outline: 1px solid #ccc; }
+    #contact-main .section-wrapper #row2 .left-side form button {
+      background: #47b475;
+      border: 2px solid #47b475;
+      color: white;
+      font-weight: bold;
+      line-height: 48px;
+      margin-top: 20px;
+      text-transform: uppercase;
+      -webkit-transition: background 0.3s ease-in;
+      transition: background 0.3s ease-in;
+      width: 100%; }
+      #contact-main .section-wrapper #row2 .left-side form button:hover {
+        background: #40a269; }
+
+#contact-main .section-wrapper #row2 .right-side {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%; }
