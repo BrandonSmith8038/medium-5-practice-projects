@@ -892,3 +892,48 @@ footer {
     padding-right: 50px; }
     #about-section2 .section-wrapper .row .section {
       width: 25%; }
+
+#about-section3 .section-wrapper .team-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 60px 30px;
+  margin: 30px 15px; }
+
+#about-section3 .section-wrapper .team-left,
+#about-section3 .section-wrapper .team-middle,
+#about-section3 .section-wrapper .team-right {
+  width: 30%; }
+
+#about-section3 .section-wrapper .team-left h6 {
+  color: #292929;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase; }
+
+#about-section3 .section-wrapper .team-middle img {
+  max-width: 100%; }
+
+#about-section3 .section-wrapper .team-right .team-name {
+  color: #292929;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+
+#about-section3 .section-wrapper .team-right .team-title {
+  margin-bottom: 40px; }
+
+#about-section3 .section-wrapper .team-right .team-title,
+#about-section3 .section-wrapper .team-right .team-bio {
+  color: #666;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }

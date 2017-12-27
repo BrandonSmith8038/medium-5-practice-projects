@@ -94,3 +94,52 @@
     }
   }
 }
+#about-section3 {
+  .section-wrapper {
+    .team-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 60px 30px;
+      margin: 30px 15px;
+    }
+    .team-left,
+    .team-middle,
+    .team-right {
+      width: 30%;
+    }
+    .team-left h6 {
+      color: #292929;
+      font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .team-middle {
+      img {
+        max-width: 100%;
+      }
+    }
+    .team-right {
+      .team-name {
+        color: #292929;
+        font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      .team-title {
+        margin-bottom: 40px;
+      }
+      .team-title,
+      .team-bio {
+        color: #666;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+    }
+  }
+}
