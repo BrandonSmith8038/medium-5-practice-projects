@@ -1,0 +1,39 @@
+#contact-header {
+  .section-wrapper {
+    background: #f8f8f8;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 150px;
+  }
+  h2 {
+    font-family: $raleway;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  ul {
+    align-self: flex-end;
+    display: flex;
+
+    li {
+      color: #777;
+      font-family: $raleway;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      &:nth-child(1),
+      &:nth-child(2) {
+        color: #47b475;
+        padding-right: 15px;
+        &:after {
+          color: #777;
+          content: '/';
+          padding-left: 15px;
+        }
+      }
+    }
+  }
+}
