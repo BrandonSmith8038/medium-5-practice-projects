@@ -41,7 +41,7 @@
   .section-wrapper {
     .row {
       display: flex;
-      height: auto;
+      height: 50vw;
       max-height: 640px;
     }
     #row1 {
@@ -98,7 +98,7 @@
           font-size: 12px;
           font-weight: bold;
           letter-spacing: 3px;
-          margin-top: 24px;
+          margin-top: 80px;
           text-transform: uppercase;
           text-align: center;
         }

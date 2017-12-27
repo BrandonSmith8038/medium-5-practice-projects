@@ -42,7 +42,7 @@
   <section id="contact-main">
     <div class="section-wrapper">
       <div class="row" id='row1'>
-        <div class="left-side">dfsadas</div>
+        <div class="left-side"></div>
         <div class="right-side">
           <h2>Get In Touch</h2>
           <p>
@@ -83,8 +83,7 @@
             </div>
           </form>
         </div>
-        <div class="ride-side">
-          MAP
+        <div class="right-side" id='map'>
         </div>
       </div>
     </div>
@@ -165,7 +164,20 @@
       </a>
     </div>
   </footer>
-
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqKQmbrxr6QYbhitietWpAh0OfyKaj8Gc&callback=initMap" async
+    defer></script>
+  <script>
+    function initMap() {
+      // Create a map object and specify the DOM element for display.
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: {
+          lat: -34.397,
+          lng: 150.644
+        },
+        zoom: 8
+      });
+    }
+  </script>
   <script src="main.js"></script>
 </body>
 
