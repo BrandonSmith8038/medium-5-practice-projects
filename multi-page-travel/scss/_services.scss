@@ -47,3 +47,94 @@
     }
   }
 }
+#services-section2 {
+  .section-wrapper {
+    .row {
+      display: flex;
+      margin: 50px 185px;
+      text-align: center;
+    }
+    .left-side,
+    .right-side {
+      background: #f8f8f8;
+      padding: 50px;
+
+      .icon {
+        color: #47b475;
+        font-size: 64px;
+        margin-bottom: 16px;
+      }
+      .heading h3 {
+        font-family: $raleway;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 16px;
+      }
+      .description {
+        font-family: $openSans;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+      }
+    }
+    .left-side {
+      margin-right: 30px;
+    }
+  }
+}
+#services-section3 {
+  color: white;
+  margin-top: 30px;
+  .section-wrapper {
+    background: url('../img/cover11.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+
+    .section-heading h2 {
+      font-family: $raleway;
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: 6px;
+      padding-top: 75px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .boxes-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 125px;
+      text-align: center;
+
+      #box3 {
+        margin-right: 0px;
+      }
+    }
+    .box {
+      background: rgba(34, 34, 34, 0.4);
+      margin-right: 30px;
+      padding: 32px;
+
+      .icon {
+        font-size: 64px;
+        margin-bottom: 16px;
+      }
+      .heading h3 {
+        font-family: $raleway;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+      }
+      .description {
+        font-family: $openSans;
+        font-size: 13px;
+        font-weight: 400;
+        text-align: left;
+      }
+    }
+  }
+}

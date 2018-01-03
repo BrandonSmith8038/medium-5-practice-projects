@@ -1168,3 +1168,84 @@ footer {
           color: #777;
           content: '/';
           padding-left: 15px; }
+
+#services-section2 .section-wrapper .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px 185px;
+  text-align: center; }
+
+#services-section2 .section-wrapper .left-side,
+#services-section2 .section-wrapper .right-side {
+  background: #f8f8f8;
+  padding: 50px; }
+  #services-section2 .section-wrapper .left-side .icon,
+  #services-section2 .section-wrapper .right-side .icon {
+    color: #47b475;
+    font-size: 64px;
+    margin-bottom: 16px; }
+  #services-section2 .section-wrapper .left-side .heading h3,
+  #services-section2 .section-wrapper .right-side .heading h3 {
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 16px; }
+  #services-section2 .section-wrapper .left-side .description,
+  #services-section2 .section-wrapper .right-side .description {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left; }
+
+#services-section2 .section-wrapper .left-side {
+  margin-right: 30px; }
+
+#services-section3 {
+  color: white;
+  margin-top: 30px; }
+  #services-section3 .section-wrapper {
+    background: url("../img/cover11.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 500px; }
+    #services-section3 .section-wrapper .section-heading h2 {
+      font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: 6px;
+      padding-top: 75px;
+      text-align: center;
+      text-transform: uppercase; }
+    #services-section3 .section-wrapper .boxes-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin: 30px 125px;
+      text-align: center; }
+      #services-section3 .section-wrapper .boxes-wrapper #box3 {
+        margin-right: 0px; }
+    #services-section3 .section-wrapper .box {
+      background: rgba(34, 34, 34, 0.4);
+      margin-right: 30px;
+      padding: 32px; }
+      #services-section3 .section-wrapper .box .icon {
+        font-size: 64px;
+        margin-bottom: 16px; }
+      #services-section3 .section-wrapper .box .heading h3 {
+        font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+        text-transform: uppercase; }
+      #services-section3 .section-wrapper .box .description {
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        text-align: left; }
