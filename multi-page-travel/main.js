@@ -47,3 +47,8 @@ function myFunction() {
     navbar.classList.remove('sticky');
   }
 }
+
+//Toggle Mobile Nave
+document.querySelector('.toggle-nav').addEventListener('click', () => {
+  document.querySelector('ul.nav').classList.toggle('open');
+});

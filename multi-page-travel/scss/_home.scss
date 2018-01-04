@@ -8,51 +8,7 @@
   background-repeat: no-repeat;
   height: 100vh;
 }
-//====================
-// NAV
-//===================
-.nav {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  display: flex;
-  color: white;
-  justify-content: flex-end;
-  padding: 10px 20px;
 
-  li.nav-link {
-    color: white;
-    font-size: 13px;
-    margin-right: 20px;
-    text-transform: uppercase;
-
-    a {
-      &:visited {
-        color: #fff;
-      }
-    }
-  }
-
-  li#nav-brand {
-    margin-right: auto;
-    a {
-      color: white;
-      font-size: 25px;
-      letter-spacing: 5px;
-
-      &:visited {
-        color: white;
-      }
-    }
-  }
-}
-.nav.white {
-  li.nav-link {
-    a {
-      &:visited {
-        color: #222;
-      }
-    }
-  }
-}
 //====================
 // Hero Section
 //===================
