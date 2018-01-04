@@ -19,9 +19,16 @@
   padding: 10px 20px;
 
   li.nav-link {
+    color: white;
     font-size: 13px;
     margin-right: 20px;
     text-transform: uppercase;
+
+    a {
+      &:visited {
+        color: #fff;
+      }
+    }
   }
 
   li#nav-brand {
@@ -30,6 +37,19 @@
       color: white;
       font-size: 25px;
       letter-spacing: 5px;
+
+      &:visited {
+        color: white;
+      }
+    }
+  }
+}
+.nav.white {
+  li.nav-link {
+    a {
+      &:visited {
+        color: #222;
+      }
     }
   }
 }

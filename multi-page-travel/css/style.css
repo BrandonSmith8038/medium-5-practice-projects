@@ -14,8 +14,12 @@ button {
   outline: none; }
 
 a {
+  color: white;
   cursor: pointer;
   text-decoration: none; }
+
+a:visited {
+  color: white; }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
@@ -49,15 +53,23 @@ a {
           justify-content: flex-end;
   padding: 10px 20px; }
   .nav li.nav-link {
+    color: white;
     font-size: 13px;
     margin-right: 20px;
     text-transform: uppercase; }
+    .nav li.nav-link a:visited {
+      color: #fff; }
   .nav li#nav-brand {
     margin-right: auto; }
     .nav li#nav-brand a {
       color: white;
       font-size: 25px;
       letter-spacing: 5px; }
+      .nav li#nav-brand a:visited {
+        color: white; }
+
+.nav.white li.nav-link a:visited {
+  color: #222; }
 
 .hero-content {
   -webkit-box-align: start;
@@ -794,10 +806,10 @@ footer {
       footer .footer-button button:hover {
         border: 2px solid #fff; }
 
-.nav li.nav-link {
+.nav.white li.nav-link {
   color: #222; }
 
-.nav li#nav-brand a {
+.nav.white li#nav-brand a {
   color: #222; }
 
 #about-hero .section-wrapper {

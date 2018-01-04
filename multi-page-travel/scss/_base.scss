@@ -14,10 +14,13 @@ button {
   outline: none;
 }
 a {
+  color: white;
   cursor: pointer;
   text-decoration: none;
 }
-
+a:visited {
+  color: white;
+}
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 
 .sticky {
