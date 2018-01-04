@@ -4,6 +4,12 @@
     display: flex;
     justify-content: space-between;
     padding: 100px 150px;
+
+    @include media_phone {
+      flex-direction: column;
+      padding: 50px 20px;
+      text-align: center;
+    }
   }
   h2 {
     font-family: $raleway;
@@ -11,10 +17,19 @@
     font-weight: 400;
     letter-spacing: 2px;
     text-transform: uppercase;
+
+    @include media_phone {
+      margin-bottom: 20px;
+    }
   }
   ul {
     align-self: flex-end;
     display: flex;
+
+    @include media_phone {
+      align-self: flex-start;
+      margin: 0 auto;
+    }
 
     li {
       color: #777;
@@ -43,6 +58,12 @@
       display: flex;
       height: 50vw;
       max-height: 640px;
+
+      @include media_phone {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 50px;
+      }
     }
     #row1 {
       .left-side {
@@ -50,6 +71,11 @@
         background-size: cover;
         background-position: 50% 50%;
         flex: 0 0 50%;
+
+        @include media_phone {
+          background-position: center;
+          height: 250px;
+        }
       }
       .right-side {
         align-self: center;
@@ -62,6 +88,12 @@
         margin-bottom: 24px;
         padding: 50px 10%;
         width: 50%;
+
+        @include media_phone {
+          padding: 50px 0;
+          text-align: center;
+          width: 90%;
+        }
         .address {
           padding-top: 24px;
         }
@@ -92,6 +124,10 @@
         display: flex;
         flex-direction: column;
         flex: 0 0 50%;
+
+        @include media_phone {
+          height: auto;
+        }
         h6 {
           color: #292929;
           font-family: $raleway;
@@ -157,6 +193,11 @@
       }
       .right-side {
         flex: 0 0 50%;
+
+        @include media_phone {
+          height: 30vh;
+          margin-bottom: 50px;
+        }
       }
     }
   }

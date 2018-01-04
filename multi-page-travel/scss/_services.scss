@@ -8,6 +8,10 @@
     background-size: cover;
     justify-content: space-between;
     padding: 100px;
+
+    @include media_phone {
+      flex-direction: column;
+    }
   }
 
   .left-side h2 {
@@ -17,6 +21,10 @@
     line-height: 40px;
     letter-spacing: 6px;
     text-transform: uppercase;
+
+    @include media_phone {
+      margin-bottom: 25px;
+    }
   }
 
   .right-side {
@@ -53,6 +61,12 @@
       display: flex;
       margin: 50px 185px;
       text-align: center;
+
+      @include media_phone {
+        flex-direction: column;
+        margin: 50px auto;
+        width: 90%;
+      }
     }
     .left-side,
     .right-side {
@@ -80,6 +94,10 @@
     }
     .left-side {
       margin-right: 30px;
+
+      @include media_phone {
+        margin: 0;
+      }
     }
   }
 }
@@ -92,6 +110,10 @@
     background-position: center;
     background-size: cover;
     height: 500px;
+
+    @include media_phone {
+      height: auto;
+    }
 
     .section-heading h2 {
       font-family: $raleway;
@@ -108,6 +130,12 @@
       margin: 30px 125px;
       text-align: center;
 
+      @include media_phone {
+        flex-direction: column;
+        margin: 30px auto;
+        width: 90%;
+      }
+
       #box3 {
         margin-right: 0px;
       }
@@ -116,6 +144,11 @@
       background: rgba(34, 34, 34, 0.4);
       margin-right: 30px;
       padding: 32px;
+
+      @include media_phone {
+        margin-bottom: 15px;
+        margin-right: 0;
+      }
 
       .icon {
         font-size: 64px;
@@ -144,6 +177,11 @@
     background: url('../img/icons-bg.JPG') center center no-repeat;
     background-size: cover;
     height: 250px;
+
+    @include media_phone {
+      padding: 30px 10px;
+      text-align: center;
+    }
 
     h3 {
       color: #292929;
@@ -175,6 +213,9 @@
         transition: background 0.4s ease-in-out;
         &:hover {
           background: darken(rgb(71, 180, 117), 20%);
+        }
+        @include media_phone {
+          margin-bottom: 30px;
         }
       }
     }
