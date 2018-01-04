@@ -26,19 +26,19 @@
       display: flex;
 
       li {
-        color: #777;
+        color: #fff;
         font-family: $raleway;
         font-size: 12px;
         font-weight: 500;
         line-height: 24px;
         letter-spacing: 2px;
         text-transform: uppercase;
-        &:nth-child(2),
-        &:nth-child(3) {
+        &:nth-child(1),
+        &:nth-child(2) {
           color: #fff;
           padding-right: 15px;
           &:after {
-            color: #777;
+            color: rgb(255, 255, 255);
             content: '/';
             padding-left: 15px;
           }
@@ -134,6 +134,48 @@
         font-size: 13px;
         font-weight: 400;
         text-align: left;
+      }
+    }
+  }
+}
+#services-section4 {
+  .section-wrapper {
+    @include flex_centered_columns;
+    background: url('../img/icons-bg.JPG') center center no-repeat;
+    background-size: cover;
+    height: 250px;
+
+    h3 {
+      color: #292929;
+      font-size: 40px;
+      font-family: $raleway;
+      line-height: 48px;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+    p {
+      color: rgb(102, 102, 102);
+      font-family: $openSans;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      margin-bottom: 40px;
+    }
+    a {
+      button {
+        background: rgb(71, 180, 117);
+        color: #fff;
+        font-family: $raleway;
+        font-size: 14px;
+        font-weight: 700;
+        height: 50px;
+        line-height: 46px;
+        min-width: 200px;
+        padding: 0px 26px;
+        transition: background 0.4s ease-in-out;
+        &:hover {
+          background: darken(rgb(71, 180, 117), 20%);
+        }
       }
     }
   }

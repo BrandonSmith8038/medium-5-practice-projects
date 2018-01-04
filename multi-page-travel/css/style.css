@@ -1166,18 +1166,18 @@ footer {
     display: -ms-flexbox;
     display: flex; }
     #services-header .right-side ul li {
-      color: #777;
+      color: #fff;
       font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 12px;
       font-weight: 500;
       line-height: 24px;
       letter-spacing: 2px;
       text-transform: uppercase; }
-      #services-header .right-side ul li:nth-child(2), #services-header .right-side ul li:nth-child(3) {
+      #services-header .right-side ul li:nth-child(1), #services-header .right-side ul li:nth-child(2) {
         color: #fff;
         padding-right: 15px; }
-        #services-header .right-side ul li:nth-child(2):after, #services-header .right-side ul li:nth-child(3):after {
-          color: #777;
+        #services-header .right-side ul li:nth-child(1):after, #services-header .right-side ul li:nth-child(2):after {
+          color: white;
           content: '/';
           padding-left: 15px; }
 
@@ -1261,3 +1261,50 @@ footer {
         font-size: 13px;
         font-weight: 400;
         text-align: left; }
+
+#services-section4 .section-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url("../img/icons-bg.JPG") center center no-repeat;
+  background-size: cover;
+  height: 250px; }
+  #services-section4 .section-wrapper h3 {
+    color: #292929;
+    font-size: 40px;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 48px;
+    font-weight: 300;
+    margin-bottom: 8px; }
+  #services-section4 .section-wrapper p {
+    color: #666666;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 40px; }
+  #services-section4 .section-wrapper a button {
+    background: #47b475;
+    color: #fff;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    height: 50px;
+    line-height: 46px;
+    min-width: 200px;
+    padding: 0px 26px;
+    -webkit-transition: background 0.4s ease-in-out;
+    transition: background 0.4s ease-in-out; }
+    #services-section4 .section-wrapper a button:hover {
+      background: #2a6b45; }
