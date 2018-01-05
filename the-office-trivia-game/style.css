@@ -2,3 +2,11 @@
 .message {
   margin-top: 50px;
 }
+#game {
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  align-self: center;
+}

@@ -1,64 +1,3 @@
-const questions = [
-  {
-    question: 'Who Owns A Beet Farm?',
-    possbileAnswers: ['Dwight', 'Toby', 'Erin'],
-    correctAnswer: 'Dwight'
-  },
-  {
-    question: "What Is Jim's Last Name?",
-    possbileAnswers: ['Schrute', 'Mcquire', 'Halpert'],
-    correctAnswer: 'Halpert'
-  },
-  {
-    question: 'Who Did Michael Get Married To?',
-    possbileAnswers: ['Holly Flax', 'Jan Levinson', 'Carol Stills'],
-    correctAnswer: 'Holly Flax'
-  },
-  {
-    question: 'What Is The Name Of The Company They Work At',
-    possbileAnswers: [
-      'Scranton Paper Company',
-      'Dunder Scott Paper Company',
-      'Dunder Mifflin Paper Company'
-    ],
-    correctAnswer: 'Dunder Mifflin Paper Company'
-  },
-  {
-    question: 'What City Does The Show Take Place In?',
-    possbileAnswers: ['Philidephia', 'Scranton', 'Chicago'],
-    correctAnswer: 'Scranton'
-  },
-  {
-    question: 'What State Is That In?',
-    possbileAnswers: ['Indiana', 'Pennslyvania', 'Iowa'],
-    correctAnswer: 'Pennslyvania'
-  },
-  {
-    question: 'How Many Seasons Of The Show Where There?',
-    possbileAnswers: ['7', '8', '9'],
-    correctAnswer: '9'
-  },
-  {
-    question: 'Where Does Michael Take Everyone For His Birthday?',
-    possbileAnswers: ['Ice Skating', 'Bowling', 'The Zoo'],
-    correctAnswer: 'Ice Skating'
-  },
-  {
-    question: 'Near What Tourist Attraction do Jim and Pam get Married?',
-    possbileAnswers: [
-      'Statue Of Liberty',
-      'Niagra Falls',
-      'Empire State Building'
-    ],
-    correctAnswer: 'Niagra Falls'
-  },
-  {
-    question: 'What Job Does Stanley Do?',
-    possbileAnswers: ['Sales', 'Human Resources', 'Accounting'],
-    correctAnswer: 'Accounting'
-  }
-];
-
 const gameArea = document.getElementById('game');
 const questionArea = document.getElementById('questionArea');
 const answerBtn1 = document.getElementById('answer1');
@@ -68,19 +7,16 @@ const msgArea = document.querySelector('.message');
 const nextBtn = document.getElementById('next');
 const numCorrectDiv = document.querySelector('.numCorrect');
 
-let currentQuestion = 8;
+let questions = [];
+let currentQuestion = 0;
 let correctAnswer = '';
-let possbileAnswer = questions[currentQuestion].possbileAnswers;
 let numCorrect = 0;
 
-gameStart();
-
 function gameStart() {
-  debug();
-
+  let possbileAnswer = questions[currentQuestion].possbileAnswers;
   let chosenAnswer = '';
-  nextBtn.textContent = 'Next Question';
-  numCorrectDiv.innerText = '';
+  currentQuestion = 0;
+
   numCorrect = 0;
 
   askQuestion();
@@ -88,11 +24,29 @@ function gameStart() {
   next();
 }
 
-function askQuestion() {
-  let question = questions[currentQuestion].question;
-  let possbileAnswer = questions[currentQuestion].possbileAnswers;
+function getQuestions() {
+  fetch('./questions.json')
+    .then(response => response.json())
+    .then(data => {
+      questions = data;
+      console.log('Game Start');
+      gameStart();
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
 
-  correctAnswer = questions[currentQuestion].correctAnswer;
+function askQuestion() {
+  const randNum = getRandomQuestion();
+
+  let question = questions[randNum].question;
+  let possbileAnswer = questions[randNum].possbileAnswers;
+
+  nextBtn.textContent = 'Next Question';
+  numCorrectDiv.innerText = '';
+
+  correctAnswer = questions[randNum].correctAnswer;
   answerBtn1.classList.remove('disabled');
   answerBtn2.classList.remove('disabled');
   answerBtn3.classList.remove('disabled');
@@ -101,6 +55,10 @@ function askQuestion() {
   answerBtn1.innerText = possbileAnswer[0];
   answerBtn2.innerText = possbileAnswer[1];
   answerBtn3.innerText = possbileAnswer[2];
+
+  debug(randNum);
+
+  questions.splice(randNum, 1);
 }
 
 function checkAnswer() {
@@ -146,26 +104,41 @@ function next() {
   nextBtn.addEventListener('click', () => {
     currentQuestion++;
     if (currentQuestion <= 9) {
-      askQuestion();
       msgArea.innerHTML = '';
+      askQuestion();
     } else {
       numCorrectDiv.innerText = `
 			Your Answered ${numCorrect} Out Of 10
 			`;
       nextBtn.textContent = 'Play Again?';
       currentQuestion = 0;
-      gameStart();
+      nextBtn.classList.add('disabled');
+      setTimeout(() => {
+        getQuestions();
+        nextBtn.classList.remove('disabled');
+      }, 5000);
     }
   });
 }
 
-function debug() {
+function getRandomQuestion() {
+  const randomQuestion = Math.floor(Math.random() * (questions.length - 1 + 1));
+
+  return randomQuestion;
+}
+
+function debug(randNum) {
   console.log('***************Debug******************');
+  console.clear();
   console.log('Questions', questions);
-  console.log(('Current Question', currentQuestion));
-  console.log('Question', questions[currentQuestion].question);
-  console.log('Possible Answers', possbileAnswer);
+  console.log(('Current Question', randNum));
+  console.log('Question', questions[randNum].question);
+  console.log('Possible Answers', questions[randNum].possbileAnswers);
   console.log('Correct Answer', correctAnswer);
   console.log('Number Correct', numCorrect);
+  console.log('Random Max', questions.length);
+  console.log('Randon Number', randNum);
   console.log('***************Debug******************');
 }
+
+getQuestions();
