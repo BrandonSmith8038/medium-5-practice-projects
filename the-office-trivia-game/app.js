@@ -13,28 +13,27 @@ let correctAnswer = '';
 let numCorrect = 0;
 
 function gameStart() {
-  let possbileAnswer = questions[currentQuestion].possbileAnswers;
-  let chosenAnswer = '';
-  currentQuestion = 0;
+  getQuestions().then(questions => {
+    let possbileAnswer = questions[currentQuestion].possbileAnswers;
+    let chosenAnswer = '';
+    currentQuestion = 0;
 
-  numCorrect = 0;
+    numCorrect = 0;
 
-  askQuestion();
-  checkAnswer();
-  next();
+    askQuestion();
+    checkAnswer();
+    next();
+  });
 }
 
-function getQuestions() {
-  fetch('./questions.json')
-    .then(response => response.json())
-    .then(data => {
-      questions = data;
-      console.log('Game Start');
-      gameStart();
-    })
-    .catch(err => {
-      console.log(err);
-    });
+async function getQuestions() {
+  const response = await fetch('questions.json');
+
+  const data = await response.json();
+
+  questions = data;
+
+  return questions;
 }
 
 function askQuestion() {
@@ -114,8 +113,9 @@ function next() {
       currentQuestion = 0;
       nextBtn.classList.add('disabled');
       setTimeout(() => {
-        getQuestions();
+        questions = getQuestions();
         nextBtn.classList.remove('disabled');
+        askQuestion();
       }, 5000);
     }
   });
@@ -141,4 +141,4 @@ function debug(randNum) {
   console.log('***************Debug******************');
 }
 
-getQuestions();
+gameStart();
