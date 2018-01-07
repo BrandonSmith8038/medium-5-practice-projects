@@ -12,8 +12,10 @@ class UI {
 
   chooseAnswer() {
     this.answers.addEventListener('click', e => {
-      const answer = e.target.text;
-      game.checkAnswer(answer);
+      if (e.target.className !== 'answers') {
+        const answer = e.target.text;
+        game.checkAnswer(answer);
+      }
     });
   }
 

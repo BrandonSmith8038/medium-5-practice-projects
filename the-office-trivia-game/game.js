@@ -22,8 +22,6 @@ class Game {
 
   askQuestion() {
     this.randNum = this.getRandomNumber();
-    console.log('Questions: ', this.questions);
-    console.log('Random Number:', this.randNum);
 
     this.question = this.questions[this.randNum].question;
     this.possbileAnswer = this.questions[this.randNum].possbileAnswers;
