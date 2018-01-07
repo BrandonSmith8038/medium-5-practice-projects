@@ -1,3 +1,9 @@
+//Init UI Class
+const ui = new UI();
+
+//Init Game Class
+const game = new Game();
+
 const gameArea = document.getElementById('game');
 const questionArea = document.getElementById('questionArea');
 const answerBtn1 = document.getElementById('answer1');
@@ -5,47 +11,34 @@ const answerBtn2 = document.getElementById('answer2');
 const answerBtn3 = document.getElementById('answer3');
 const msgArea = document.querySelector('.message');
 const nextBtn = document.getElementById('next');
-const numCorrectDiv = document.querySelector('.numCorrect');
+const randNum = game.getRandomNumber();
 
 let questions = [];
 let currentQuestion = 0;
 let correctAnswer = '';
-let numCorrect = 0;
 
 function gameStart() {
-  getQuestions().then(questions => {
+  game.getQuestions().then(questions => {
     let possbileAnswer = questions[currentQuestion].possbileAnswers;
     let chosenAnswer = '';
     currentQuestion = 0;
 
-    numCorrect = 0;
-
     askQuestion();
     checkAnswer();
     next();
+
+    //debug(randNum);
   });
 }
 
-async function getQuestions() {
-  const response = await fetch('questions.json');
-
-  const data = await response.json();
-
-  questions = data;
-
-  return questions;
-}
-
 function askQuestion() {
-  const randNum = getRandomQuestion();
-
-  let question = questions[randNum].question;
-  let possbileAnswer = questions[randNum].possbileAnswers;
+  let question = game.questions[randNum].question;
+  let possbileAnswer = game.questions[randNum].possbileAnswers;
 
   nextBtn.textContent = 'Next Question';
-  numCorrectDiv.innerText = '';
+  //numCorrectDiv.innerText = '';
 
-  correctAnswer = questions[randNum].correctAnswer;
+  correctAnswer = game.questions[randNum].correctAnswer;
   answerBtn1.classList.remove('disabled');
   answerBtn2.classList.remove('disabled');
   answerBtn3.classList.remove('disabled');
@@ -55,9 +48,7 @@ function askQuestion() {
   answerBtn2.innerText = possbileAnswer[1];
   answerBtn3.innerText = possbileAnswer[2];
 
-  debug(randNum);
-
-  questions.splice(randNum, 1);
+  game.questions.splice(randNum, 1);
 }
 
 function checkAnswer() {
@@ -67,22 +58,25 @@ function checkAnswer() {
     const chosenAnswer = e.target.text;
 
     if (chosenAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-      addMessage('green', 'CORRECT!');
-      numCorrect++;
+      //If Correct Answer Chosen
+
+      //Show Message
+      ui.addMessage('green', 'CORRECT!');
+
+      //Increase Score
+      game.increaseScore();
       disableBtns();
     } else {
-      addMessage('red', `INCORRECT, The correct answer was: ${correctAnswer}`);
+      //If Incorrect answer is chosen
+
+      //Show Message
+      ui.addMessage(
+        'red',
+        `INCORRECT, The correct answer was: ${correctAnswer}`
+      );
       disableBtns();
     }
   });
-}
-
-function addMessage(color, msg) {
-  msgArea.innerHTML = `
-		<div class='${color}-text'>
-			<h4>${msg}</h4>
-		</div>
-	`;
 }
 
 function disableBtns() {
@@ -106,28 +100,24 @@ function next() {
       msgArea.innerHTML = '';
       askQuestion();
     } else {
-      numCorrectDiv.innerText = `
-			Your Answered ${numCorrect} Out Of 10
-			`;
+      ui.displayScore();
       nextBtn.textContent = 'Play Again?';
-      currentQuestion = 0;
       nextBtn.classList.add('disabled');
       setTimeout(() => {
-        questions = getQuestions();
         nextBtn.classList.remove('disabled');
-        askQuestion();
+        gameStart();
       }, 5000);
     }
   });
 }
 
 function getRandomQuestion() {
-  const randomQuestion = Math.floor(Math.random() * (questions.length - 1 + 1));
+  // const randomQuestion = Math.floor(Math.random() * (questions.length - 1 + 1));
 
   return randomQuestion;
 }
 
-function debug(randNum) {
+function debug() {
   console.log('***************Debug******************');
   console.clear();
   console.log('Questions', questions);
@@ -135,7 +125,7 @@ function debug(randNum) {
   console.log('Question', questions[randNum].question);
   console.log('Possible Answers', questions[randNum].possbileAnswers);
   console.log('Correct Answer', correctAnswer);
-  console.log('Number Correct', numCorrect);
+  console.log('Number Correct', game.getScore());
   console.log('Random Max', questions.length);
   console.log('Randon Number', randNum);
   console.log('***************Debug******************');
