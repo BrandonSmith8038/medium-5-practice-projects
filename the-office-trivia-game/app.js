@@ -11,7 +11,6 @@ const answerBtn2 = document.getElementById('answer2');
 const answerBtn3 = document.getElementById('answer3');
 const msgArea = document.querySelector('.message');
 const nextBtn = document.getElementById('next');
-const randNum = game.getRandomNumber();
 
 let questions = [];
 let currentQuestion = 0;
@@ -19,36 +18,16 @@ let correctAnswer = '';
 
 function gameStart() {
   game.getQuestions().then(questions => {
-    let possbileAnswer = questions[currentQuestion].possbileAnswers;
+    //let possbileAnswer = questions[currentQuestion].possbileAnswers;
     let chosenAnswer = '';
     currentQuestion = 0;
 
-    askQuestion();
+    game.askQuestion();
     checkAnswer();
     next();
 
     //debug(randNum);
   });
-}
-
-function askQuestion() {
-  let question = game.questions[randNum].question;
-  let possbileAnswer = game.questions[randNum].possbileAnswers;
-
-  nextBtn.textContent = 'Next Question';
-  //numCorrectDiv.innerText = '';
-
-  correctAnswer = game.questions[randNum].correctAnswer;
-  answerBtn1.classList.remove('disabled');
-  answerBtn2.classList.remove('disabled');
-  answerBtn3.classList.remove('disabled');
-
-  questionArea.innerText = question;
-  answerBtn1.innerText = possbileAnswer[0];
-  answerBtn2.innerText = possbileAnswer[1];
-  answerBtn3.innerText = possbileAnswer[2];
-
-  game.questions.splice(randNum, 1);
 }
 
 function checkAnswer() {
@@ -98,7 +77,7 @@ function next() {
     currentQuestion++;
     if (currentQuestion <= 9) {
       msgArea.innerHTML = '';
-      askQuestion();
+      game.askQuestion();
     } else {
       ui.displayScore();
       nextBtn.textContent = 'Play Again?';
