@@ -2,31 +2,23 @@
 const ui = new UI();
 
 //Init Game Class
-const game = new Game();
+const game = new Game(ui);
 
 const gameArea = document.getElementById('game');
 const questionArea = document.getElementById('questionArea');
-const answerBtn1 = document.getElementById('answer1');
-const answerBtn2 = document.getElementById('answer2');
-const answerBtn3 = document.getElementById('answer3');
+
 const msgArea = document.querySelector('.message');
-const nextBtn = document.getElementById('next');
 
 let questions = [];
-let currentQuestion = 0;
+//let currentQuestion = 0;
 let correctAnswer = '';
 
 function gameStart() {
   game.getQuestions().then(questions => {
-    //let possbileAnswer = questions[currentQuestion].possbileAnswers;
-    let chosenAnswer = '';
-    currentQuestion = 0;
-
+    ui.setNextBtnTextContent('Next Question');
     game.askQuestion();
     checkAnswer();
     next();
-
-    //debug(randNum);
   });
 }
 
@@ -44,7 +36,7 @@ function checkAnswer() {
 
       //Increase Score
       game.increaseScore();
-      disableBtns();
+      //disableBtns();
     } else {
       //If Incorrect answer is chosen
 
@@ -53,7 +45,7 @@ function checkAnswer() {
         'red',
         `INCORRECT, The correct answer was: ${correctAnswer}`
       );
-      disableBtns();
+      //disableBtns();
     }
   });
 }
@@ -73,19 +65,16 @@ function disableBtns() {
 }
 
 function next() {
-  nextBtn.addEventListener('click', () => {
-    currentQuestion++;
-    if (currentQuestion <= 9) {
+  ui.nextBtn.addEventListener('click', () => {
+    game.increaseCurrentQuestionIndex();
+    //Dont Wan't to use splice until using randmon number again
+    //game.questions.splice(game.currentQuestion, 1);
+    if (game.getCurrentQuestionIndex() <= 9) {
       msgArea.innerHTML = '';
       game.askQuestion();
     } else {
       ui.displayScore();
-      nextBtn.textContent = 'Play Again?';
-      nextBtn.classList.add('disabled');
-      setTimeout(() => {
-        nextBtn.classList.remove('disabled');
-        gameStart();
-      }, 5000);
+      game.gameOver();
     }
   });
 }
