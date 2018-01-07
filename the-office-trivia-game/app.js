@@ -4,12 +4,12 @@ const ui = new UI();
 //Init Game Class
 const game = new Game();
 
-const gameArea = document.getElementById('game');
+/* const gameArea = document.getElementById('game');
 const questionArea = document.getElementById('questionArea');
 
 let questions = [];
 //let currentQuestion = 0;
-let correctAnswer = '';
+let correctAnswer = ''; */
 
 function gameStart() {
   game.getQuestions().then(questions => {

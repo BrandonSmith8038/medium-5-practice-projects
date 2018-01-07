@@ -45,11 +45,11 @@ class UI {
     this.answerBtn2.classList.add('disabled');
     this.answerBtn3.classList.add('disabled');
 
-    if (this.answerBtn1.text === correctAnswer) {
+    if (this.answerBtn1.text === game.correctAnswer) {
       this.answerBtn1.classList.remove('disabled');
-    } else if (this.answerBtn2.text === correctAnswer) {
+    } else if (this.answerBtn2.text === game.correctAnswer) {
       this.answerBtn2.classList.remove('disabled');
-    } else if (this.answerBtn3.text === correctAnswer) {
+    } else if (this.answerBtn3.text === game.correctAnswer) {
       this.answerBtn3.classList.remove('disabled');
     }
   }
@@ -62,6 +62,8 @@ class UI {
 
   playAgain() {
     const playAgain = document.getElementById('playAgain');
+
+    ui.nextBtn.classList.add('disabled');
 
     playAgain.style.display = 'block';
     playAgain.addEventListener('click', location.reload);

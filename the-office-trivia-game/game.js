@@ -5,6 +5,7 @@ class Game {
     this.randNum = '';
     this.question = '';
     this.possbileAnswer = '';
+    this.correctAnswer = '';
     this.currentQuestion = 0;
     this.isGameOver = false;
   }
@@ -25,8 +26,9 @@ class Game {
       this.getCurrentQuestionIndex()
     ].possbileAnswers;
 
-    correctAnswer = this.questions[this.getCurrentQuestionIndex()]
-      .correctAnswer;
+    this.correctAnswer = this.questions[
+      this.getCurrentQuestionIndex()
+    ].correctAnswer;
 
     //Reenable Buttons For New Question
     ui.enableAnswerButtons();
@@ -38,7 +40,7 @@ class Game {
   }
 
   checkAnswer(chosenAnswer) {
-    if (chosenAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+    if (chosenAnswer.toLowerCase() === this.correctAnswer.toLowerCase()) {
       //If Correct Answer Chosen
 
       //Show Message
@@ -55,7 +57,7 @@ class Game {
       //Show Message
       ui.addMessage(
         'red',
-        `INCORRECT, The correct answer was: ${correctAnswer}`
+        `INCORRECT, The correct answer was: ${this.correctAnswer}`
       );
 
       //Disable Buttons - Except for correct answer
@@ -93,11 +95,5 @@ class Game {
 
   getRandomNumber() {
     this.randNum = Math.floor(Math.random() * (this.questions.length - 1 + 1));
-  }
-
-  gameOver() {
-    this.currentQuestion = 0;
-    this.numCorrect = 0;
-    ui.playAgain();
   }
 }
