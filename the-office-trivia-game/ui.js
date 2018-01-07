@@ -7,6 +7,7 @@ class UI {
     this.answerBtn3 = document.getElementById('answer3');
     this.nextBtn = document.getElementById('next');
     this.msgArea = document.querySelector('.message');
+    this.questionAnswers = document.getElementById('questionAnswers');
   }
 
   chooseAnswer() {
@@ -58,6 +59,10 @@ class UI {
     this.answerBtn1.classList.remove('disabled');
     this.answerBtn2.classList.remove('disabled');
     this.answerBtn3.classList.remove('disabled');
+  }
+
+  removeQuestionandAnswer() {
+    this.questionAnswers.innerHTML = ' ';
   }
 
   playAgain() {
