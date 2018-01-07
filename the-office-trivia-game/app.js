@@ -2,7 +2,7 @@
 const ui = new UI();
 
 //Init Game Class
-const game = new Game(ui);
+const game = new Game();
 
 const gameArea = document.getElementById('game');
 const questionArea = document.getElementById('questionArea');
@@ -16,41 +16,12 @@ let correctAnswer = '';
 function gameStart() {
   game.getQuestions().then(questions => {
     game.askQuestion();
-    checkAnswer();
+    ui.chooseAnswer();
     next();
   });
 }
 
-function checkAnswer() {
-  const answers = document.querySelector('.answers');
-
-  answers.addEventListener('click', e => {
-    const chosenAnswer = e.target.text;
-
-    if (chosenAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-      //If Correct Answer Chosen
-
-      //Show Message
-      ui.addMessage('green', 'CORRECT!');
-
-      //Increase Score
-      game.increaseScore();
-
-      //Disable Buttons - Except for correct answer
-      ui.disableAnswerButtons();
-    } else {
-      //If Incorrect answer is chosen
-
-      //Show Message
-      ui.addMessage(
-        'red',
-        `INCORRECT, The correct answer was: ${correctAnswer}`
-      );
-      //Disable Buttons - Except for correct answer
-      ui.disableAnswerButtons();
-    }
-  });
-}
+function checkAnswer() {}
 
 function next() {
   ui.nextBtn.addEventListener('click', () => {

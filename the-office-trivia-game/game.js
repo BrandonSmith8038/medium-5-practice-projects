@@ -37,6 +37,32 @@ class Game {
     ui.answerBtn3.innerText = this.possbileAnswer[2];
   }
 
+  checkAnswer(chosenAnswer) {
+    if (chosenAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+      //If Correct Answer Chosen
+
+      //Show Message
+      ui.addMessage('green', 'CORRECT!');
+
+      //Increase Score
+      this.increaseScore();
+
+      //Disable Buttons - Except for correct answer
+      ui.disableAnswerButtons();
+
+      //If Incorrect answer is chosen
+    } else {
+      //Show Message
+      ui.addMessage(
+        'red',
+        `INCORRECT, The correct answer was: ${correctAnswer}`
+      );
+
+      //Disable Buttons - Except for correct answer
+      ui.disableAnswerButtons();
+    }
+  }
+
   increaseScore() {
     this.numCorrect++;
   }

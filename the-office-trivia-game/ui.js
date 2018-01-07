@@ -1,11 +1,21 @@
 class UI {
   constructor() {
     this.numDiv = document.querySelector('.numCorrect');
+    this.answers = document.querySelector('.answers');
     this.answerBtn1 = document.getElementById('answer1');
     this.answerBtn2 = document.getElementById('answer2');
     this.answerBtn3 = document.getElementById('answer3');
     this.nextBtn = document.getElementById('next');
   }
+
+  chooseAnswer() {
+    this.answers.addEventListener('click', e => {
+      const answer = e.target.text;
+      console.log('Answer From ui', e);
+      game.checkAnswer(answer);
+    });
+  }
+
   addMessage(color, msg) {
     msgArea.innerHTML = `
 		<div class='${color}-text'>
