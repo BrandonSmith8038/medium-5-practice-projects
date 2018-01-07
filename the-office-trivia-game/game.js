@@ -63,6 +63,19 @@ class Game {
     }
   }
 
+  nextQuestion() {
+    this.increaseCurrentQuestionIndex();
+    //Dont Wan't to use splice until using randmon number again
+    //this.questions.splice(this.currentQuestion, 1);
+    if (this.getCurrentQuestionIndex() <= 9) {
+      this.askQuestion();
+      ui.emptyMessage();
+    } else {
+      ui.displayScore();
+      ui.playAgain();
+    }
+  }
+
   increaseScore() {
     this.numCorrect++;
   }

@@ -7,8 +7,6 @@ const game = new Game();
 const gameArea = document.getElementById('game');
 const questionArea = document.getElementById('questionArea');
 
-const msgArea = document.querySelector('.message');
-
 let questions = [];
 //let currentQuestion = 0;
 let correctAnswer = '';
@@ -17,24 +15,7 @@ function gameStart() {
   game.getQuestions().then(questions => {
     game.askQuestion();
     ui.chooseAnswer();
-    next();
-  });
-}
-
-function checkAnswer() {}
-
-function next() {
-  ui.nextBtn.addEventListener('click', () => {
-    game.increaseCurrentQuestionIndex();
-    //Dont Wan't to use splice until using randmon number again
-    //game.questions.splice(game.currentQuestion, 1);
-    if (game.getCurrentQuestionIndex() <= 9) {
-      msgArea.innerHTML = '';
-      game.askQuestion();
-    } else {
-      ui.displayScore();
-      ui.playAgain();
-    }
+    ui.nextButtonClick();
   });
 }
 

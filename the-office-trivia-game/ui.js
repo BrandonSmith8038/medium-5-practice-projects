@@ -6,22 +6,32 @@ class UI {
     this.answerBtn2 = document.getElementById('answer2');
     this.answerBtn3 = document.getElementById('answer3');
     this.nextBtn = document.getElementById('next');
+    this.msgArea = document.querySelector('.message');
   }
 
   chooseAnswer() {
     this.answers.addEventListener('click', e => {
       const answer = e.target.text;
-      console.log('Answer From ui', e);
       game.checkAnswer(answer);
     });
   }
 
+  nextButtonClick() {
+    this.nextBtn.addEventListener('click', () => {
+      game.nextQuestion();
+    });
+  }
+
   addMessage(color, msg) {
-    msgArea.innerHTML = `
+    this.msgArea.innerHTML = `
 		<div class='${color}-text'>
 			<p>${msg}</p>
 		</div>
 	`;
+  }
+
+  emptyMessage() {
+    this.msgArea.innerHTML = '';
   }
 
   displayScore() {
