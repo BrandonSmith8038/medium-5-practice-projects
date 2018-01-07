@@ -35,7 +35,9 @@ function checkAnswer() {
 
       //Increase Score
       game.increaseScore();
-      //disableBtns();
+
+      //Disable Buttons - Except for correct answer
+      ui.disableAnswerButtons();
     } else {
       //If Incorrect answer is chosen
 
@@ -44,23 +46,10 @@ function checkAnswer() {
         'red',
         `INCORRECT, The correct answer was: ${correctAnswer}`
       );
-      //disableBtns();
+      //Disable Buttons - Except for correct answer
+      ui.disableAnswerButtons();
     }
   });
-}
-
-function disableBtns() {
-  answerBtn1.classList.add('disabled');
-  answerBtn2.classList.add('disabled');
-  answerBtn3.classList.add('disabled');
-
-  if (answerBtn1.text === correctAnswer) {
-    answerBtn1.classList.remove('disabled');
-  } else if (answerBtn2.text === correctAnswer) {
-    answerBtn2.classList.remove('disabled');
-  } else if (answerBtn3.text === correctAnswer) {
-    answerBtn3.classList.remove('disabled');
-  }
 }
 
 function next() {

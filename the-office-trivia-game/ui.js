@@ -9,7 +9,7 @@ class UI {
   addMessage(color, msg) {
     msgArea.innerHTML = `
 		<div class='${color}-text'>
-			<h4>${msg}</h4>
+			<p>${msg}</p>
 		</div>
 	`;
   }
@@ -19,6 +19,21 @@ class UI {
 			Your Answered ${game.getScore()} Out Of 10
 			`;
   }
+
+  disableAnswerButtons() {
+    this.answerBtn1.classList.add('disabled');
+    this.answerBtn2.classList.add('disabled');
+    this.answerBtn3.classList.add('disabled');
+
+    if (this.answerBtn1.text === correctAnswer) {
+      this.answerBtn1.classList.remove('disabled');
+    } else if (this.answerBtn2.text === correctAnswer) {
+      this.answerBtn2.classList.remove('disabled');
+    } else if (this.answerBtn3.text === correctAnswer) {
+      this.answerBtn3.classList.remove('disabled');
+    }
+  }
+
   enableAnswerButtons() {
     this.answerBtn1.classList.remove('disabled');
     this.answerBtn2.classList.remove('disabled');
