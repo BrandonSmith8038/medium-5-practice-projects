@@ -15,7 +15,6 @@ let correctAnswer = '';
 
 function gameStart() {
   game.getQuestions().then(questions => {
-    ui.setNextBtnTextContent('Next Question');
     game.askQuestion();
     checkAnswer();
     next();
@@ -74,7 +73,7 @@ function next() {
       game.askQuestion();
     } else {
       ui.displayScore();
-      game.gameOver();
+      ui.playAgain();
     }
   });
 }

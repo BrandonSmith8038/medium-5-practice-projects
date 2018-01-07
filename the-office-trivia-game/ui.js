@@ -25,7 +25,10 @@ class UI {
     this.answerBtn3.classList.remove('disabled');
   }
 
-  setNextBtnTextContent(text) {
-    this.nextBtn.textContent = text;
+  playAgain() {
+    const playAgain = document.getElementById('playAgain');
+
+    playAgain.style.display = 'block';
+    playAgain.addEventListener('click', location.reload);
   }
 }

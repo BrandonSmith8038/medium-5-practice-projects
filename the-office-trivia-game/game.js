@@ -59,7 +59,6 @@ class Game {
   gameOver() {
     this.currentQuestion = 0;
     this.numCorrect = 0;
-    ui.setNextBtnTextContent('Play Again');
-    //gameStart();
+    ui.playAgain();
   }
 }
