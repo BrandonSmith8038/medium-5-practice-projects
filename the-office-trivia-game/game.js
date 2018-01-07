@@ -21,14 +21,14 @@ class Game {
   }
 
   askQuestion() {
-    this.question = this.questions[this.getCurrentQuestionIndex()].question;
-    this.possbileAnswer = this.questions[
-      this.getCurrentQuestionIndex()
-    ].possbileAnswers;
+    this.randNum = this.getRandomNumber();
+    console.log('Questions: ', this.questions);
+    console.log('Random Number:', this.randNum);
 
-    this.correctAnswer = this.questions[
-      this.getCurrentQuestionIndex()
-    ].correctAnswer;
+    this.question = this.questions[this.randNum].question;
+    this.possbileAnswer = this.questions[this.randNum].possbileAnswers;
+
+    this.correctAnswer = this.questions[this.randNum].correctAnswer;
 
     //Reenable Buttons For New Question
     ui.enableAnswerButtons();
@@ -40,6 +40,7 @@ class Game {
   }
 
   checkAnswer(chosenAnswer) {
+    this.removeQuestions();
     if (chosenAnswer.toLowerCase() === this.correctAnswer.toLowerCase()) {
       //If Correct Answer Chosen
 
@@ -69,7 +70,7 @@ class Game {
     this.increaseCurrentQuestionIndex();
     //Dont Wan't to use splice until using randmon number again
     //this.questions.splice(this.currentQuestion, 1);
-    if (this.getCurrentQuestionIndex() <= 9) {
+    if (this.getCurrentQuestionIndex() <= this.questions.length) {
       this.askQuestion();
       ui.emptyMessage();
     } else {
@@ -95,5 +96,11 @@ class Game {
 
   getRandomNumber() {
     this.randNum = Math.floor(Math.random() * (this.questions.length - 1 + 1));
+
+    return this.randNum;
+  }
+
+  removeQuestions() {
+    this.questions.splice(this.randNum, 1);
   }
 }

@@ -12,9 +12,4 @@ function gameStart() {
   });
 }
 
-function getRandomQuestion() {
-  // const randomQuestion = Math.floor(Math.random() * (questions.length - 1 + 1));
-  return randomQuestion;
-}
-
 gameStart();
