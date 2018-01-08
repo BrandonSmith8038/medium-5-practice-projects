@@ -72,6 +72,7 @@ class Game {
       this.askQuestion();
       ui.emptyMessage();
     } else {
+      this.choosePicture();
       ui.displayScore();
       ui.emptyMessage();
       ui.removeQuestionandAnswer();
@@ -102,5 +103,33 @@ class Game {
 
   removeQuestions() {
     this.questions.splice(this.randNum, 1);
+  }
+
+  choosePicture() {
+    let winningPic = '';
+    let winningName = '';
+    if (this.numCorrect === 1 || this.numCorrect === 2) {
+      winningPic =
+        'https://images.moviepilot.com/images/c_limit,q_auto:good,w_600/uiflbbpk32loes2lfgbs/the-office-theory-is-toby-flenderson-the-scranton-strangler.jpg';
+      winningName = 'Toby';
+    } else if (this.numCorrect === 3 || this.numCorrect === 4) {
+      winningPic =
+        'https://4.bp.blogspot.com/-0pUuDCaGFqw/WNr2dD4_ryI/AAAAAAAAOzc/wrCa1NW-Kmc5ShxNd9018GJkKxOk9GNBgCLcB/s1600/635942906755810120-2056818024_635838641005536031744994076_stanley%2Bin%2Bhat.jpg';
+      winningName = 'Stanley';
+    } else if (this.numCorrect === 5 || this.numCorrect === 6) {
+      winningPic =
+        'https://ih0.redbubble.net/image.119424016.1263/flat,800x800,075,f.u2.jpg';
+      winningName = 'Dwight';
+    } else if (this.numCorrect === 7 || this.numCorrect === 8) {
+      winningPic =
+        'https://img.buzzfeed.com/buzzfeed-static/static/2016-04/23/10/campaign_images/webdr02/what-percent-compatible-with-jim-halpert-from-the-2-24963-1461422235-11_dblbig.jpg';
+      winningName = 'Jim';
+    } else if (this.numCorrect === 9 || this.numCorrect === 10) {
+      winningPic =
+        'https://static.independent.co.uk/s3fs-public/styles/article_small/public/thumbnails/image/2016/02/18/10/the-office.jpg';
+      winningName = 'Michael';
+    }
+    console.log('WinningPic', winningPic);
+    ui.showWinningPic(winningPic, winningName);
   }
 }

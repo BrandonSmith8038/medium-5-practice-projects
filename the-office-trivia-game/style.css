@@ -35,3 +35,14 @@
 .message {
   text-align: center;
 }
+
+.pictures {
+  margin-bottom: 30px;
+}
+img.pic.circle.responsive-img {
+  width: 75px;
+  height: 75px;
+}
+img#winning-pic {
+  max-width: 300px;
+}

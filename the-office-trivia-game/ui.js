@@ -8,6 +8,7 @@ class UI {
     this.nextBtn = document.getElementById('next');
     this.msgArea = document.querySelector('.message');
     this.questionAnswers = document.getElementById('questionAnswers');
+    this.winningPicDiv = document.getElementById('winningpic');
   }
 
   chooseAnswer() {
@@ -74,5 +75,12 @@ class UI {
 
     playAgain.style.display = 'block';
     playAgain.addEventListener('click', location.reload);
+  }
+
+  showWinningPic(picture, name) {
+    this.winningPicDiv.innerHTML = `
+		<img src='${picture}' id='winning-pic' class='img-responsive'>
+		<h4 class='black-text'>Your Are ${name}</h4>
+		`;
   }
 }
