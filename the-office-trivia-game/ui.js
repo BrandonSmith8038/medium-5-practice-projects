@@ -41,7 +41,7 @@ class UI {
 
   displayScore() {
     this.numDiv.innerText = `
-			Your Answered ${game.getScore()} Out Of 10
+			You Answered ${game.getScore()} Out Of 10
 			`;
   }
 
@@ -72,7 +72,7 @@ class UI {
   playAgain() {
     const playAgain = document.getElementById('playAgain');
 
-    ui.nextBtn.classList.add('disabled');
+    ui.nextBtn.style.display = 'none';
     this.msgArea.style.display = 'none';
 
     playAgain.style.display = 'block';
