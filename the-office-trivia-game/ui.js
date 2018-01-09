@@ -13,8 +13,9 @@ class UI {
 
   chooseAnswer() {
     this.answers.addEventListener('click', e => {
+      console.log(e);
       if (e.target.className !== 'answers') {
-        const answer = e.target.text;
+        const answer = e.target.textContent;
         game.checkAnswer(answer);
       }
     });
@@ -72,6 +73,7 @@ class UI {
     const playAgain = document.getElementById('playAgain');
 
     ui.nextBtn.classList.add('disabled');
+    this.msgArea.style.display = 'none';
 
     playAgain.style.display = 'block';
     playAgain.addEventListener('click', location.reload);

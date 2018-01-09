@@ -5,47 +5,42 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css" />
+	<link rel="stylesheet" href="https://unpkg.com/papercss@1.4.0/dist/paper.min.css">
 	<link rel="stylesheet" href="style.css">
 	<title>The Office Trivia Game</title>
 </head>
 
 <body>
-	<!-- <h1>The Office Trivia Game</h1> -->
-
 	<div id="game">
-		<div class="row">
-			<div class="col s12 m12">
-				<div class="card">
-					<div class="card-content white-text">
-						<div class="pictures">
-							<img src="https://images.moviepilot.com/images/c_limit,q_auto:good,w_600/uiflbbpk32loes2lfgbs/the-office-theory-is-toby-flenderson-the-scranton-strangler.jpg"
-							  alt="" class="pic circle responsive-img">
-							<img src="https://4.bp.blogspot.com/-0pUuDCaGFqw/WNr2dD4_ryI/AAAAAAAAOzc/wrCa1NW-Kmc5ShxNd9018GJkKxOk9GNBgCLcB/s1600/635942906755810120-2056818024_635838641005536031744994076_stanley%2Bin%2Bhat.jpg"
-							  alt="" class="pic circle responsive-img">
-							<img src="https://ih0.redbubble.net/image.119424016.1263/flat,800x800,075,f.u2.jpg" alt="" class="pic circle responsive-img">
-							<img src="https://img.buzzfeed.com/buzzfeed-static/static/2016-04/23/10/campaign_images/webdr02/what-percent-compatible-with-jim-halpert-from-the-2-24963-1461422235-11_dblbig.jpg"
-							  alt="" class="pic circle responsive-img">
-							<img src="https://static.independent.co.uk/s3fs-public/styles/article_small/public/thumbnails/image/2016/02/18/10/the-office.jpg"
-							  alt="" class="pic circle responsive-img">
-						</div>
-						<div id="winningpic"></div>
-						<div id="questionAnswers">
-							<span class="card-title black-text" id='questionArea'></span>
-							<div class='answers'>
-								<a class="waves-effect waves-light btn gameBtn" id='answer1'></a>
-								<a class="waves-effect waves-light btn gameBtn" id='answer2'></a>
-								<a class="waves-effect waves-light btn gameBtn" id='answer3'></a>
-							</div>
-						</div>
-						<div class="message"></div>
-						<div class="numCorrect black-text"></div>
-						<div class='nextPlayAgain'>
-							<a class="waves-effect waves-light btn gameBtn" id='next'>Next Question</a>
-							<input type="button" class='waves-effect waves-light btn gameBtn' value='Play Again' onClick='location.href=location.href'
-							  id="playAgain">
-						</div>
+		<div class="card">
+			<div class="card-body">
+				<div class="pictures">
+					<img src="https://images.moviepilot.com/images/c_limit,q_auto:good,w_600/uiflbbpk32loes2lfgbs/the-office-theory-is-toby-flenderson-the-scranton-strangler.jpg"
+					  alt="" class="top-pic">
+					<img src="https://4.bp.blogspot.com/-0pUuDCaGFqw/WNr2dD4_ryI/AAAAAAAAOzc/wrCa1NW-Kmc5ShxNd9018GJkKxOk9GNBgCLcB/s1600/635942906755810120-2056818024_635838641005536031744994076_stanley%2Bin%2Bhat.jpg"
+					  alt="" class="top-pic">
+					<img src="https://ih0.redbubble.net/image.119424016.1263/flat,800x800,075,f.u2.jpg" alt="" class="top-pic">
+					<img src="https://img.buzzfeed.com/buzzfeed-static/static/2016-04/23/10/campaign_images/webdr02/what-percent-compatible-with-jim-halpert-from-the-2-24963-1461422235-11_dblbig.jpg"
+					  alt="" class="top-pic">
+					<img src="https://static.independent.co.uk/s3fs-public/styles/article_small/public/thumbnails/image/2016/02/18/10/the-office.jpg"
+					  alt="" class="top-pic">
+				</div>
+				<div id="winningpic"></div>
+				<div id="questionAnswers">
+					<span class="card-title black-text" id='questionArea'></span>
+					<div class='answers'>
+						<button class="paper-btn btn gameBtn" id='answer1'>
+						</button>
+						<button class="paper-btn btn gameBtn" id='answer2'>
+						</button>
+						<button class="paper-btn btn gameBtn" id='answer3'></button>
 					</div>
+				</div>
+				<div class="message"></div>
+				<div class="numCorrect black-text"></div>
+				<div class='nextPlayAgain'>
+					<a class="paper-btn btn gameBtn" id='next'>Next Question</a>
+					<input type="button" class='paper-btn btn gameBtn' value='Play Again' onClick='location.href=location.href' id="playAgain">
 				</div>
 			</div>
 		</div>
