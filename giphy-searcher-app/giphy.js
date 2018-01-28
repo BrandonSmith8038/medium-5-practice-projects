@@ -4,7 +4,7 @@ class Giphy {
     this.fullUrl = '';
     this.key = key.apiKey;
     //Will Eventually Get this from the input box and the ui class
-    this.searchTerm = 'Cheeseburger';
+    this.searchTerm = 'Rodefdafsfo';
     this.limit = 10;
     this.apiResponse = '';
   }
